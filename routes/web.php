@@ -16,3 +16,10 @@ Route::get('/', function () {
 });
 
 Route::get('/stocks','StockController@getIndex');
+Route::get('/stocks/show/{id}','StockController@getShow');
+
+Route::post('/stocks/countPrice/{id}','StockController@postcountPrice');
+Route::post('/stocks/decountPrice/{id}','StockController@postdecountPrice');
+
+Route::post('/stocks/sell/{id}','StockController@postSell');
+Route::post('/stocks/restock/{id}','StockController@postRestock');
