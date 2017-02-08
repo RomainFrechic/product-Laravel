@@ -19,7 +19,7 @@
 
 		<form action="/stocks/decountPrice/{{$produit->id}}" method="post">
 			{{csrf_field()}}
-			<button class="ui green button">+€</button>
+			<button class="positive ui green button">+€</button>
 		</form>
 
 		<h2 id="textProduit" ><div>Stock : {{$produit->gestionStock}}</div></h2>
