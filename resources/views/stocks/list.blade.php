@@ -28,6 +28,7 @@
 			<div class="extra content">
 				<a><i class="user icon"></i>Stock disponible : {{$produit->gestionStock}} Produits</a>
 			</div>
+		<button class="ui red button"><a href="/stocks/modifStock/{{$produit->id}}">Modifier</a></button>
 		</div>
 
 		@endforeach

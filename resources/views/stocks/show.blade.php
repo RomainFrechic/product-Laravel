@@ -33,7 +33,8 @@
 			{{csrf_field()}}
 			<button class="ui orange button">+</button>
 		</form>
-
+		
+		 <button class="ui red button"><a href="/stocks/modifStock/{{$produit->id}}">Modifier</a></button>
 		@stop
 
 	</body>

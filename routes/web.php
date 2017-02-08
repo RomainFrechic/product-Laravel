@@ -28,3 +28,9 @@ Route::get('/stocks/addProduit','StockController@getShowFormulaire');
 Route::post('/stocks/addProduit/newForm','StockController@postRequest');
 
 Route::get('/stocks/list','StockController@getList');
+
+Route::get('/stocks/modifStock/{id}','StockController@getmodifStock');
+Route::post('/stocks/modifStock/newForm','StockController@postmodifStock');
+
+
+Route::get('/stocks/modifStock','StockController@getmodifStock');

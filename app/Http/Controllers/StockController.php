@@ -64,9 +64,25 @@ class StockController extends Controller
 	}
 
 public function getList(){
-	$stocks = \App\Stock::all();
+	$stocks = Stock::all();
 		return view('stocks.list',['stockage'=>$stocks]);
 	}
+
+public function getmodifStock($id){
+	    $stock = Stock::find($id);
+		return view('stocks.modifStock',['stock'=>$stock]);
+	}
+
+ public function postmodifStock(Request $request)
+    {
+        $stocks = Stock::find($request->id);
+        $stocks->name = $request->name;
+        $stocks->price = $request->price;
+        $stocks->gestionStock = $request->gestionStock;
+        $stocks->description = $request->description;
+        $stocks->save();
+        return back();
+    }
 
     
 }

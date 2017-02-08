@@ -35,8 +35,12 @@
 				</tr> 
     </tbody>
   </table>
-  <button class="ui green button"><a href="/stocks/addProduit">Formulaire =></a></button><br>
-   <button class="ui green button"><a href="/stocks/list">Liste de produit</a></button><br>
+  <button class="ui green button"><a href="/stocks/addProduit">Formulaire =></a></button></br>
+  <div> </div>
+   <button class="ui brown button"><a href="/stocks/list">Liste de produit</a></button></br>
+    <div> </div>
+
+   <div> </div>
   <button class="ui orange button"><a href="http://127.0.0.1:8000/">Acceuil</a></button>
 
 @stop
