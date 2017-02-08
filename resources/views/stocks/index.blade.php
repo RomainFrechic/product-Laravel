@@ -2,7 +2,7 @@
 
 @section('content')
 
-<h1 id="text3d">Ma liste de produits</h1>
+<h1 id="text3d">Tableau de produits</h1>
 <!-- @foreach($stockage as $produit)
 	<li id="textProduit"><h2>Produit : {{$produit->name}}</h2></li>
 	<li id="textProduit"> prix : {{$produit->price}}</li>
@@ -27,7 +27,7 @@
 				<tr>
 	<th id="textProduit">{{$produit->id}}</th>			
 	<th id="textProduit"><a href="/stocks/show/{{$produit->id}}">{{$produit->name}}</a></th>
-	<td id="textProduit">{{$produit->price}}</td>
+	<td id="textProduit">{{$produit->price/100}} €</td>
 	<td id="textProduit">{{$produit->gestionStock}}</td>
   <td id="textProduit">{{$produit->description}}</td>
 	
@@ -35,6 +35,8 @@
 				</tr> 
     </tbody>
   </table>
-  <button class="ui green button"><a href="/stocks/addProduit">Formulaire =></a></button>
+  <button class="ui green button"><a href="/stocks/addProduit">Formulaire =></a></button><br>
+   <button class="ui green button"><a href="/stocks/list">Liste de produit</a></button><br>
+  <button class="ui orange button"><a href="http://127.0.0.1:8000/">Acceuil</a></button>
 
 @stop

@@ -26,3 +26,5 @@ Route::post('/stocks/restock/{id}','StockController@postRestock');
 
 Route::get('/stocks/addProduit','StockController@getShowFormulaire');
 Route::post('/stocks/addProduit/newForm','StockController@postRequest');
+
+Route::get('/stocks/list','StockController@getList');

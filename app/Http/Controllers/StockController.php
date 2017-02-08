@@ -63,4 +63,10 @@ class StockController extends Controller
 		return back();
 	}
 
+public function getList(){
+	$stocks = \App\Stock::all();
+		return view('stocks.list',['stockage'=>$stocks]);
+	}
+
+    
 }
