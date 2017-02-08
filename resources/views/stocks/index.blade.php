@@ -10,14 +10,15 @@
 	
 	@endforeach -->
 
-	<div class="ui segment" >
-		<table class="ui celled striped table" >
+	<div>
+		<table>
 			<thead>
 				<tr>
 					<th id="textProduit" ><h2>ID</h2></th>
 					<th id="textProduit" ><h2>Produit</h2></th>
 					<th id="textProduit" ><h2>Price</h2></th>
 					<th id="textProduit" ><h2>Stock</h2></th>
+            <th id="textProduit" ><h2>Description</h2></th>
 				</tr>	
 			</thead>
 			<tbody>
@@ -28,9 +29,12 @@
 	<th id="textProduit"><a href="/stocks/show/{{$produit->id}}">{{$produit->name}}</a></th>
 	<td id="textProduit">{{$produit->price}}</td>
 	<td id="textProduit">{{$produit->gestionStock}}</td>
+  <td id="textProduit">{{$produit->description}}</td>
 	
 	@endforeach
 				</tr> 
     </tbody>
   </table>
+  <button class="ui green button"><a href="/stocks/addProduit">Formulaire =></a></button>
+
 @stop

@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/semantic.css">
+
 	        <!-- Styles -->
         <style>
             html, body {
@@ -148,7 +150,7 @@ h1::before {
 
  #textProduit{
 
- 	width:30%;
+ 	width:20%;
  	text-align: center;
  	color: #FDD692;
     letter-spacing: .15em;
@@ -167,6 +169,7 @@ h1::before {
 
 
 @yield('content')
+
 
 </body>
 </html>

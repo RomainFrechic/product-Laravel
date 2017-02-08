@@ -23,3 +23,6 @@ Route::post('/stocks/decountPrice/{id}','StockController@postdecountPrice');
 
 Route::post('/stocks/sell/{id}','StockController@postSell');
 Route::post('/stocks/restock/{id}','StockController@postRestock');
+
+Route::get('/stocks/addProduit','StockController@getShowFormulaire');
+Route::post('/stocks/addProduit/newForm','StockController@postRequest');

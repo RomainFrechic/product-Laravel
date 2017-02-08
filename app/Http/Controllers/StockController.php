@@ -47,4 +47,20 @@ class StockController extends Controller
 		return back();
 	}
 
+	public function getShowFormulaire(){
+		return view('stocks.addProduit');
+	}
+
+	public function postRequest(Request $request){
+		
+		$produit = new Stock;
+		$produit->id =  $request->id;
+		$produit->name =  $request->name;
+		$produit->price =  $request->price;
+		$produit->gestionStock =  $request->gestionStock; 
+		$produit->description =  $request->description;
+		$produit->save();
+		return back();
+	}
+
 }
