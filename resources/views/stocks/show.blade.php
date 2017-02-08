@@ -34,7 +34,10 @@
 			<button class="ui orange button">+</button>
 		</form>
 		
-		 <button class="ui red button"><a href="/stocks/modifStock/{{$produit->id}}">Modifier</a></button>
+		 <form  action="/stocks/modifStock/{{$produit->id}}" method="get">
+		 	{{csrf_field()}}
+		 	<input class="ui primary button" type="submit" value="modifier">
+		 </form>
 		@stop
 
 	</body>

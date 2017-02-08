@@ -13,7 +13,6 @@
 
 	<div class="ui two column centered grid">
 		@foreach($stockage as $produit)
-
 		<div class="ui link card">
 			<div class="image">
 				<img src="https://unsplash.it/458/354?image=889">
@@ -28,13 +27,19 @@
 			<div class="extra content">
 				<a><i class="user icon"></i>Stock disponible : {{$produit->gestionStock}} Produits</a>
 			</div>
-		<button class="ui red button"><a href="/stocks/modifStock/{{$produit->id}}">Modifier</a></button>
-		</div>
-
+		<form  action="/stocks/modifStock/{{$produit->id}}" method="get">
+		 	{{csrf_field()}}
+		 	<input class="ui primary button" type="submit" value="modifier">
+		 </form>
+		 <form  action="/stocks/index/{{$produit->id}}" method="post">
+		 	{{csrf_field()}}
+		 	<input class="ui red button" type="submit" value="suprimer">
+		 </form> 
+		 
+</div>
 		@endforeach
 	</div>	
 	<button class="ui green button"><a href="/stocks">Tableau de produit</a></button>
-
 
 </body>
 </html>

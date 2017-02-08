@@ -84,5 +84,14 @@ public function getmodifStock($id){
         return back();
     }
 
-    
+    public function postSuprime(Request $request)
+    {
+        $delete = Stock::find($request->id);
+        $delete->delete();
+        return back();
+    }
+
+   
+
+
 }

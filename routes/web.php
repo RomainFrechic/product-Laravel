@@ -34,3 +34,6 @@ Route::post('/stocks/modifStock/newForm','StockController@postmodifStock');
 
 
 Route::get('/stocks/modifStock','StockController@getmodifStock');
+
+
+Route::post('/stocks/index/{id}','StockController@postSuprime');
